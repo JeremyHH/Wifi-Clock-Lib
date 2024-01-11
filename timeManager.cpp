@@ -87,7 +87,7 @@ unsigned int seconds_from_midnight(const rtc_time_t &t)
 
 unsigned int seconds_upto_midnight(const rtc_time_t &t)
 {
-  return 24*60*60 - seconds_from_midnight(t);
+  return (24 /*hours */ * 60 /* minutes */ * 60 /* seconds */) - seconds_from_midnight(t);
 }
 
 unsigned int t2_minus_t1(const rtc_time_t &t1, const rtc_time_t &t2)
